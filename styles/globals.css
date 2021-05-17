@@ -1,0 +1,183 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+html * {
+  font-family: "Inter", sans-serif;
+}
+html,
+body {
+  background-color: #1f2128;
+  color: #ffffff;
+}
+body :focus {
+  @apply outline-none;
+}
+.btn {
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply py-3;
+  @apply px-6;
+  @apply text-menu;
+  @apply font-semibold;
+  @apply rounded-xl;
+  @apply transition;
+  @apply duration-200;
+  @apply space-x-2;
+}
+.btn-mobile {
+  @apply inline-flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply py-1;
+  @apply text-menu;
+  @apply font-semibold;
+  @apply rounded-xl;
+  @apply transition;
+  @apply duration-200;
+  @apply space-x-1;
+}
+.btn-mobile.btn-mobile-ghost {
+  border: 1px solid lightgray;
+  @apply text-white;
+  @apply px-1;
+}
+.btn-mobile.btn-mobile-selected {
+  @apply bg-white;
+  @apply text-black;
+  @apply px-1;
+}
+.btn-mobile.btn-mobile-primary {
+  @apply bg-primary;
+  @apply text-white;
+  @apply px-1;
+}
+.btn-mobile.btn-mobile-primary:hover {
+  @apply bg-primaryhover;
+}
+.btn.btn-primary {
+  @apply bg-primary;
+  @apply text-white;
+}
+.btn.btn-primary:hover {
+  @apply bg-primaryhover;
+}
+.btn.btn-editable {
+  background-color: #4fbf67;
+}
+.btn.btn-selected {
+  @apply bg-white;
+  @apply text-black;
+}
+.btn.btn-ghost {
+  border: 1px solid lightgray;
+  @apply text-white;
+  @apply px-3;
+}
+.btn.btn-success {
+  @apply bg-green;
+  @apply text-black;
+}
+.btn.btn-success:hover {
+  @apply bg-hovergreen;
+}
+.btn.btn-error {
+  @apply bg-red;
+  @apply text-white;
+}
+.btn.btn-error:hover {
+  @apply bg-hoverred;
+}
+.card {
+  @apply flex;
+  @apply flex-col;
+  @apply bg-darkcard;
+  @apply rounded-3xl;
+  @apply p-8;
+  @apply relative;
+  @apply transition;
+  @apply duration-200;
+}
+.selected {
+  @apply ring-primary;
+  @apply ring-4;
+}
+.corner-icon {
+  @apply absolute;
+  @apply top-4;
+  @apply right-4;
+  @apply text-primary;
+}
+.input-primary {
+  @apply py-5;
+  @apply px-6;
+  @apply bg-darkactive;
+  @apply rounded-xl;
+  @apply text-menu;
+  @apply font-medium;
+  @apply transition;
+  @apply duration-200;
+  @apply w-full;
+}
+.input-primary:focus {
+  @apply ring-primary;
+  @apply ring-4;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+tr:nth-child(odd) {
+  background-color: #23252c;
+}
+.slider {
+  @apply appearance-none;
+  @apply h-2;
+  @apply bg-primary;
+  @apply rounded-xl;
+  @apply outline-none;
+}
+.slider::-webkit-slider-thumb {
+  @apply appearance-none;
+  @apply w-7;
+  @apply h-7;
+  @apply bg-white;
+  @apply cursor-pointer;
+  @apply rounded-full;
+}
+.slider::-moz-range-thumb {
+  @apply appearance-none;
+  @apply w-7;
+  @apply h-7;
+  @apply bg-white;
+  @apply cursor-pointer;
+  @apply rounded-full;
+}
+.input-filter {
+  @apply py-4;
+  @apply px-5;
+  @apply bg-darkactive;
+  @apply rounded-xl;
+  @apply text-menu;
+  @apply font-medium;
+  @apply transition;
+  @apply duration-200;
+  @apply w-auto;
+}
+.input-filter:focus {
+  @apply ring-primary;
+  @apply ring-4;
+}
+.btn.btn-success-details {
+  @apply bg-green;
+  @apply text-white;
+}
+.btn.btn-success-details:hover {
+  @apply bg-hovergreen;
+}

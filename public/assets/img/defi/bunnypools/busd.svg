@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>token-busd</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="token-busd" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(80.000000, 80.000000)">
+            <circle id="Oval" fill="#F0B90B" cx="320" cy="320" r="320"></circle>
+            <g filter="url(#filter-1)" id="binance-usd-busd-logo">
+                <g transform="translate(92.444444, 92.444444)">
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.35111111" fill="#F0B90B" fill-rule="nonzero" points="227.256889 0.959288889 283.328 58.3815111 142.136889 199.572622 86.0657778 143.501511"></polygon>
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.35111111" fill="#F0B90B" fill-rule="nonzero" points="312.376889 86.0792889 368.448 143.501511 142.136889 369.812622 86.0657778 313.741511"></polygon>
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.35111111" fill="#F0B90B" fill-rule="nonzero" points="57.0168889 171.199289 113.088 228.621511 57.0168889 284.692622 0.945777778 228.621511"></polygon>
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.35111111" fill="#F0B90B" fill-rule="nonzero" points="397.496889 171.199289 453.568 228.621511 227.256889 454.932622 171.185778 398.861511"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

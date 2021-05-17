@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>token-busd_bnb</title>
+    <defs>
+        <path d="M175,232 C271.649831,232 350,200 350,149.5 C350,99 271.649831,0 175,0 C78.3501688,0 0,99 0,149.5 C0,200 78.3501688,232 175,232 Z" id="path-1"></path>
+        <filter x="-14.3%" y="-14.3%" width="128.5%" height="128.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="10" dy="-10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <filter id="filter-4">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="token-busd_bnb" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(120.000000, -130.000000)">
+            <g id="bunny" transform="translate(132.000000, 149.000000)">
+                <g id="face">
+                    <path d="M362,10 C376.911688,10 390.411688,16.0441559 400.183766,25.8162338 C409.955844,35.5883118 416,49.0883118 416,64 C416,65.9841831 415.893389,67.9434367 415.685239,69.8723066 L415.685239,69.8723066 L415.597276,70.6279918 L398.242438,182.943999 C431.846166,196.588641 459.655329,215.373558 478.556375,237.677553 C494.762993,256.802017 504.355967,278.502432 504.968659,301.631809 L504.968659,301.631809 L505,304.064417 L505,348 C505,387.768956 478.640983,423.253092 437.4787,449.13607 C394.233279,476.328931 334.459045,493 268.5,493 C203.247146,493 144.048838,476.682961 100.914821,450.005102 C59.7686617,424.556709 33.0711314,389.629043 32.0313415,350.368205 L32.0313415,350.368205 L32,347.935583 L32,304.064417 L32.0313413,301.631809 C32.6440396,278.502173 42.2372201,256.801534 58.4441664,237.676915 C77.3520591,215.365109 105.174328,196.574883 138.794129,182.929155 L138.794129,182.929155 L121.038,71.4472055 C121.096447,69.8030449 121.06979,68.1517153 121.035184,66.4893508 C121.017985,65.6631364 121,64.8335899 121,64 C121,49.0883118 127.044156,35.5883118 136.816234,25.8162338 C146.588312,16.0441559 160.088312,10 175,10 C189.749853,10 203.118587,15.9135644 212.864318,25.4994166 C222.617349,35.0924486 228.743328,48.3628477 228.992096,63.0649009 L228.992096,63.0649009 L228.999999,64.0404031 L228.997996,161.032143 C241.84972,159.695125 255.045714,159 268.5,159 C281.954578,159 295.150853,159.695156 308.00284,161.03223 L308.00284,161.03223 L308.000001,64.04036 L308.007904,63.0649009 C308.256672,48.3628477 314.382651,35.0924486 324.135682,25.4994166 C333.881413,15.9135644 347.250147,10 362,10 Z" id="Combined-Shape" stroke="#EC6998" stroke-width="20" fill="#FACFD8"></path>
+                    <ellipse id="Oval" fill="#EC6998" cx="481" cy="324" rx="55" ry="37"></ellipse>
+                    <ellipse id="Oval" fill="#EC6998" cx="55" cy="324" rx="55" ry="37"></ellipse>
+                </g>
+                <g id="mouth" transform="translate(94.000000, 271.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Oval" fill="#000000" xlink:href="#path-1"></use>
+                    <ellipse id="Oval" fill="#FFFFFF" mask="url(#mask-2)" cx="175.5" cy="0.5" rx="11.5" ry="20.5"></ellipse>
+                    <path d="M172.819065,242 C249.464049,242 331.422517,214.7 347.369897,188.45 C363.317276,162.2 249.991649,137 173.346664,137 C96.7016798,137 -15.5687488,162.2 0.424844634,188.45 C16.4184381,214.7 96.1740802,242 172.819065,242 Z" id="Oval" fill="#EC6998" mask="url(#mask-2)"></path>
+                </g>
+                <g id="eyes" transform="translate(143.257942, 228.036736)" fill="#000000">
+                    <path d="M32.7300475,31.4550326 C52.0600137,31.4550326 70,33.0751322 70,27 C70,20.9248678 54.3299662,16 35,16 C15.6700338,16 0,20.9248678 0,27 C0,33.0751322 13.4000813,31.4550326 32.7300475,31.4550326 Z" id="Oval" transform="translate(35.000000, 23.825524) rotate(-27.000000) translate(-35.000000, -23.825524) "></path>
+                    <path d="M212.210048,31.4550326 C231.540014,31.4550326 249.48,33.0751322 249.48,27 C249.48,20.9248678 233.809966,16 214.48,16 C195.150034,16 179.48,20.9248678 179.48,27 C179.48,33.0751322 192.880081,31.4550326 212.210048,31.4550326 Z" id="Oval" transform="translate(214.480000, 23.825524) scale(-1, 1) rotate(-27.000000) translate(-214.480000, -23.825524) "></path>
+                </g>
+            </g>
+        </g>
+        <g id="Group" filter="url(#filter-3)" transform="translate(0.000000, 260.000000)">
+            <circle id="Oval" fill="#F0B90B" cx="270" cy="270" r="270"></circle>
+            <g filter="url(#filter-4)" id="binance-usd-busd-logo">
+                <g transform="translate(78.000000, 78.000000)">
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.14" fill="#F0B90B" fill-rule="nonzero" points="191.748 0.8094 239.058 49.2594 119.928 168.3894 72.618 121.0794"></polygon>
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.14" fill="#F0B90B" fill-rule="nonzero" points="263.568 72.6294 310.878 121.0794 119.928 312.0294 72.618 264.7194"></polygon>
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.14" fill="#F0B90B" fill-rule="nonzero" points="48.108 144.4494 95.418 192.8994 48.108 240.2094 0.798 192.8994"></polygon>
+                    <polygon id="Path" stroke="#F0B90B" stroke-width="1.14" fill="#F0B90B" fill-rule="nonzero" points="335.388 144.4494 382.698 192.8994 191.748 383.8494 144.438 336.5394"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
