@@ -8,17 +8,6 @@ declare const window: any;
 export default function Home() {
   const provider = new ethers.providers.JsonRpcProvider(BSC_RPC);
 
-  useEffect(() => {
-    (async () => {
-      const voteContract = new ethers.Contract(VoteContractAddress, VOTE_ABI, provider);
-      const votings = await voteContract.getAllVotings();
-      console.log(votings);
-
-      setVotings([...votings]);
-      setLoaded(true);
-    })();
-  }, []);
-
   const [votings, setVotings] = useState([]);
 
   const [name, setName] = useState("");
@@ -52,6 +41,29 @@ export default function Home() {
     const votingContract = new ethers.Contract(VoteContractAddress, VOTE_ABI, signer);
     await votingContract.registerToVote(idx);
   };
+
+  const signVoting = async (idx: number) => {
+    const signer = new ethers.providers.Web3Provider(window.ethereum).getSigner();
+    const votingContract = new ethers.Contract(VoteContractAddress, VOTE_ABI, signer);
+    await votingContract.signVoting(idx);
+  };
+
+  const activateVoting = async (idx: number) => {
+    const signer = new ethers.providers.Web3Provider(window.ethereum).getSigner();
+    const votingContract = new ethers.Contract(VoteContractAddress, VOTE_ABI, signer);
+    await votingContract.activateVoting(idx);
+  };
+
+  useEffect(() => {
+    (async () => {
+      const voteContract = new ethers.Contract(VoteContractAddress, VOTE_ABI, provider);
+      const votings = await voteContract.getAllVotings();
+      console.log(votings);
+
+      setVotings([...votings]);
+      setLoaded(true);
+    })();
+  }, []);
 
   return (
     <>
@@ -98,23 +110,46 @@ export default function Home() {
               Voting duration: {voting.votingDuration / 60} minutes
             </p>
             <p className="text-grey text-captionlg">
-              Registered:{" "}
-              {voting.registered.map((address, idx) => (
-                <span key={idx}>{address.slice(0, 6) + "..." + address.slice(-4)}</span>
-              ))}
+              Is Activated: {voting.isActivated.toString()}
             </p>
+            <p className="text-grey text-captionlg">Registered:</p>
+            {voting.registered.map((address, idx) => (
+              <p key={idx} className="break-words">
+                {address.slice(0, 6) + "..." + address.slice(-4)}
+              </p>
+            ))}
+            <p className="text-grey text-captionlg">Signers:</p>
+            {voting.signers.map((address, idx) => (
+              <p key={idx} className="break-words">
+                {address.slice(0, 6) + "..." + address.slice(-4)}
+              </p>
+            ))}
             <div className="grid grid-cols-2 gap-4">
-              <button
-                className="btn bg-green"
-                onClick={() => {
-                  registerToVote(idx);
-                }}>
-                Register
-              </button>
-              <button className="btn btn-primary">Sign</button>
+              {Date.now() / 1000 - +voting.timestamp < +voting.registrationDuration &&
+              !voting.isActivated ? (
+                <button
+                  className="btn bg-green"
+                  onClick={() => {
+                    registerToVote(idx);
+                  }}>
+                  Register
+                </button>
+              ) : null}
+              {Date.now() / 1000 - +voting.timestamp < +voting.votingDuration &&
+              !voting.isActivated ? (
+                <button
+                  className="btn btn-primary"
+                  onClick={() => {
+                    signVoting(idx);
+                  }}>
+                  Sign
+                </button>
+              ) : null}
             </div>
-            {Date.now() / 1000 - +voting.timestamp > +voting.votingDuration ? (
-              <button className="btn bg-green">Activate</button>
+            {voting.registered.length === voting.signers.length ? (
+              <button className="btn bg-green" onClick={activateVoting.bind(null, idx)}>
+                Activate
+              </button>
             ) : null}
           </div>
         );
